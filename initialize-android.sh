@@ -57,7 +57,7 @@ INITIALIZATION_FILE="$ANDROID_HOME/.initialized-dependencies-$(git log -n 1 --fo
   # API 19 (4.4.x) system images
   echo y | android update sdk --all --no-ui --filter android-19 > /dev/null
   echo y | android update sdk --all --no-ui --filter addon-google_apis-google-19 > /dev/null # System image, requires android-19, provides Google APIs
-  #echo y | android update sdk --all --no-ui --filter sys-img-armeabi-v7a-android-19 > /dev/null # System image, requires android-19
+  echo y | android update sdk --all --no-ui --filter sys-img-armeabi-v7a-android-19 > /dev/null # System image, requires android-19
 
   touch "${INITIALIZATION_FILE}"
 #fi
