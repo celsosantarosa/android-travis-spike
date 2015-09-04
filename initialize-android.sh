@@ -10,7 +10,7 @@ INITIALIZATION_FILE="$ANDROID_HOME/.initialized-dependencies-$(git log -n 1 --fo
 
 #if [ ! -e "${INITIALIZATION_FILE}" ]; then
   # Fetch and initialize $ANDROID_HOME
-  ./download-android.sh
+  download-android
 
   cat $(which download-android)
 
