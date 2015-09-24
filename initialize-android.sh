@@ -8,6 +8,8 @@ set -e
 INITIALIZATION_FILE="$ANDROID_HOME/.initialized-dependencies-$(git log -n 1 --format=%h -- $0)"
 
 if [ ! -e ${INITIALIZATION_FILE} ]; then
+  echo "Initialization file doesn't exist. Trying to download it"
+  
   # fetch and initialize $ANDROID_HOME
   download-android
   # Use the latest android sdk tools
